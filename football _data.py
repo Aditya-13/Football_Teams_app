@@ -7,8 +7,10 @@ from PIL import Image, ImageTk
 from tkinter import Tk, Button, Canvas, Label, Entry
 
 url = "https://api-football-v1.p.rapidapi.com/v3/teams"
-src1 = " " # Enter the source where you want to download the Team logo (It will deleted after the program terminates)
-src2 = " " # Enter the source where you want to download the Venue Image (It will deleted after the program terminates)
+src1 = " " # Enter the source where you want to download the Team logo name as "result_file1.png.png" (It will deleted after the program terminates)
+src2 = " " # Enter the source where you want to download the Venue Image "result_file2.jpg" (It will deleted after the program terminates)
+
+# Warning!! Do not create the above files, just type the source!! and the application will create the files...
 
 window = Tk()
 window.geometry('600x800')
@@ -115,5 +117,5 @@ Label(window, text="").pack()
 
 window.mainloop()
 
-os.remove("D:\\Downloads\\Complete-Python-3-Bootcamp-master\\result_file1.png.png")
-os.remove("D:\\Downloads\\Complete-Python-3-Bootcamp-master\\result_file2.jpg")
+os.remove(src1)
+os.remove(src2)
